@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e017b748a1d8cd84d839ffdd0b03e51c
+timeCreated: 1532418094
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 123910
+  packageName: Old Soviet Cabinet
+  packageVersion: 1.0
+  assetPath: Assets/OldSovietCabinet/Materials/OldSovietCabinet_D.mat
+  uploadId: 257363
