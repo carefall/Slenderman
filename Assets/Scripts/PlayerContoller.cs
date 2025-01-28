@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -14,7 +11,7 @@ public class PlayerContoller : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float speed, sense, jumpHeight;
     private Vector3 camRot;
-    [SerializeField] private Light light;
+    [SerializeField] private Light flashlight;
     [SerializeField] private TextMeshProUGUI pickText;
     [SerializeField] private Image point, key;
     [SerializeField] private Transform keys;
@@ -22,7 +19,8 @@ public class PlayerContoller : MonoBehaviour
     [SerializeField] private string[] texts;
     private Ladder ladder;
 
-    // Start is called before the first frame update
+    private bool onGround = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,7 +29,9 @@ public class PlayerContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.linearVelocity = (transform.forward * direction.y + transform.right * direction.x) * speed;
+        Vector3 velocity = (transform.forward * direction.y + transform.right * direction.x) * speed;
+        velocity.y = rb.linearVelocity.y;
+        rb.linearVelocity = velocity;
         transform.eulerAngles += new Vector3(0, pointer.x * sense, 0);
         camRot.x -= pointer.y * sense;
         camRot.x = Mathf.Clamp(camRot.x, -90, 90);
@@ -98,6 +98,8 @@ public class PlayerContoller : MonoBehaviour
     {
         if (context.started)
         {
+            if (!onGround) return;
+            onGround = false;
             rb.AddForce(Vector3.up * jumpHeight);
         }
 
@@ -107,7 +109,7 @@ public class PlayerContoller : MonoBehaviour
     {
         if (context.started)
         {
-            light.enabled = !light.enabled;
+            GetComponent<Light>().enabled = !GetComponent<Light>().enabled;
         }
 
     }
@@ -148,7 +150,8 @@ public class PlayerContoller : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Bot"))
         {
-            bot.Stop(transform);
+            bot.Stop(transform); 
+            rb.linearVelocity = Vector3.zero;
             Destroy(this);
         }
         other.gameObject.TryGetComponent<Ladder>(out ladder);
@@ -167,5 +170,10 @@ public class PlayerContoller : MonoBehaviour
         {
             ladder = null;
         }
+    }
+
+    public void Ground()
+    {
+        onGround = true;
     }
 }
