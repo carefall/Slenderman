@@ -7,6 +7,12 @@ public class Bot : MonoBehaviour
     [SerializeField] Transform[] points;
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Animator anim;
+
+    private void Start()
+    {
+        transform.position = points[Random.Range(0, points.Length)].position;
+    }
+
     public void Chase(Vector3 player)
     {
         agent.destination = player;
