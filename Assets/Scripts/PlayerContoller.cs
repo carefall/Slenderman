@@ -57,9 +57,19 @@ public class PlayerContoller : MonoBehaviour
             }
             else
             {
-                pickText.enabled = false;
-                key.enabled = false;
-                point.enabled = true;
+                if (ladder)
+                {
+                    pickText.enabled = true;
+                    key.enabled = true;
+                    pickText.text = texts[3];
+                    key.sprite = sprites[3];
+                }
+                else
+                {
+                    pickText.enabled = false;
+                    key.enabled = false;
+                    point.enabled = true;
+                }
             }
         }
         else
