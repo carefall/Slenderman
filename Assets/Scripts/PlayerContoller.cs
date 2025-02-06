@@ -119,7 +119,7 @@ public class PlayerContoller : MonoBehaviour
     {
         if (context.started)
         {
-            GetComponent<Light>().enabled = !GetComponent<Light>().enabled;
+            flashlight.enabled = !flashlight.enabled;
         }
 
     }
