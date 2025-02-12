@@ -14,7 +14,7 @@ public class SetTerrainObstacles : MonoBehaviour
     bool isError;
     void Start()
     {
-        terrain = Terrain.activeTerrain;
+        terrain = GetComponent<Terrain>();
         Obstacle = terrain.terrainData.treeInstances;
 
         lenght = terrain.terrainData.size.z;
