@@ -6,7 +6,8 @@ public class Bot : MonoBehaviour
 {
     [SerializeField] Transform[] points;
     [SerializeField] NavMeshAgent agent;
-    [SerializeField] Animator anim;
+    [SerializeField] Animator anim,fade;
+    [SerializeField] Transform head;
 
     private void Start()
     {
@@ -27,10 +28,17 @@ public class Bot : MonoBehaviour
     }
     public void Stop(Transform player)
     {
+        agent.destination = transform.position;
         agent.isStopped = true;
         Camera.main.transform.localEulerAngles = Vector3.zero;
-        player.LookAt(transform);
-        anim.Play("Hit");
+        Camera.main.transform.LookAt(head);
+        anim.Play("Roar");
+        fade.Play("Fade");
+        Invoke("Menu", 1.1f);
+    }
+    void Menu()
+    {
+        SceneManager.LoadScene("Menu");
     }
     public void Restart()
     {
