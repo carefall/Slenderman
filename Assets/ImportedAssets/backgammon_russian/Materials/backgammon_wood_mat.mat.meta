@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 14c9252a5b65aca49b662bea254ac8ad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25428
+  packageName: Russian Backgammon
+  packageVersion: 1
+  assetPath: Assets/backgammon_russian/Materials/backgammon_wood_mat.mat
+  uploadId: 42340

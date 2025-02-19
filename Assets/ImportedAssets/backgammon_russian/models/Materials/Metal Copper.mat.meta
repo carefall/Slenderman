@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1570fa98cf90fa242a6ce08feb5f0aef
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25428
+  packageName: Russian Backgammon
+  packageVersion: 1
+  assetPath: Assets/backgammon_russian/models/Materials/Metal Copper.mat
+  uploadId: 42340

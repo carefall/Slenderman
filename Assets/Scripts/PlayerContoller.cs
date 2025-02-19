@@ -17,6 +17,7 @@ public class PlayerContoller : MonoBehaviour
     [SerializeField] private Transform keys;
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private string[] texts;
+    [SerializeField] Animator anim;
     private Ladder ladder;
 
     private bool onGround = true;
@@ -143,7 +144,7 @@ public class PlayerContoller : MonoBehaviour
                 {
                     if (keys.childCount == 0)
                     {
-
+                        anim.Play("Victory");
                         Destroy(this);
                     }
                 }

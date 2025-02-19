@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 94d507b84b6cf9748996f537638e6465
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25428
+  packageName: Russian Backgammon
+  packageVersion: 1
+  assetPath: Assets/backgammon_russian/Materials/backgammon_dice_mat.mat
+  uploadId: 42340

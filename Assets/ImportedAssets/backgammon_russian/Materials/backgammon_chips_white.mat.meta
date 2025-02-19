@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b02c5a6302c98f54e9a061ce178b4848
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25428
+  packageName: Russian Backgammon
+  packageVersion: 1
+  assetPath: Assets/backgammon_russian/Materials/backgammon_chips_white.mat
+  uploadId: 42340

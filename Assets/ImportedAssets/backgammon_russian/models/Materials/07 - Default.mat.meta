@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9a743cebfe8e98f4f999752cab18df15
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25428
+  packageName: Russian Backgammon
+  packageVersion: 1
+  assetPath: Assets/backgammon_russian/models/Materials/07 - Default.mat
+  uploadId: 42340

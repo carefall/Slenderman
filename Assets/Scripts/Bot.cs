@@ -8,6 +8,7 @@ public class Bot : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Animator anim,fade;
     [SerializeField] Transform head;
+    [SerializeField] AudioSource source;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class Bot : MonoBehaviour
         Camera.main.transform.localEulerAngles = Vector3.zero;
         Camera.main.transform.LookAt(head);
         anim.Play("Roar");
+        source.Play();
         fade.Play("Fade");
         Invoke("Menu", 1.1f);
     }

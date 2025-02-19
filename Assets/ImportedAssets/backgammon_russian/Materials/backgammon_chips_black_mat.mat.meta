@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6b25ada69346834f9c5a70245f67566
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 25428
+  packageName: Russian Backgammon
+  packageVersion: 1
+  assetPath: Assets/backgammon_russian/Materials/backgammon_chips_black_mat.mat
+  uploadId: 42340
